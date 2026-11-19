@@ -4763,9 +4763,10 @@ impl Application for App {
                             for path in &*recently_trashed {
                                 for item in &items {
                                     if let ItemMetadata::Trash { ref entry, .. } = item.metadata
-                                        && &entry.original_path == path {
-                                            paths.push(entry.clone());
-                                        }
+                                        && &entry.original_path == path
+                                    {
+                                        paths.push(entry.clone());
+                                    }
                                 }
                             }
                         }

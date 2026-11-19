@@ -1,10 +1,14 @@
-Replace this text with a description of your changes, and why these changes are important. Read and acknowledge the list below. PRs without a completed checkbox will be closed.
+## Change
 
----
+Describe the user problem and resulting behavior. Link relevant issues or upstream work.
 
-- I have not included any LLM (also known as AI) generated content in this PR, including code, comments, and descriptions.
-- I understand these changes in full and will be able to respond to review comments.
-- My change is accurately described in the commit message.
-- My contribution is tested and working as described.
-- I have read the [Developer Certificate of Origin](https://developercertificate.org/) and certify my contribution under its conditions.
-- [ ] I have read and followed all of the above requirements. For more information, see our [contributor guide](https://github.com/pop-os/pop/blob/master/CONTRIBUTING.md).
+## Evidence
+
+List the tested revision, commands, features, environment, and results. Add UI
+before/after evidence where relevant. State untested cases and remaining risks.
+
+- [ ] I understand this change and can address review findings.
+- [ ] The evidence supports the acceptance criteria in CONTRIBUTING.md.
+- [ ] Attribution and licensing are preserved.
+
+Authoring tools do not affect eligibility. Maintainer review is required before merge.

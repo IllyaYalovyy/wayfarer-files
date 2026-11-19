@@ -1,18 +1,13 @@
-<!--
-Please include in the title whether this is a bug report or a feature request.
+**Version or commit:**
 
-Also, please search existing issues (both open and closed) to make sure what you're reporting or requesting hasn't already been reported or requested.
+**Environment:** distribution, desktop session, filesystem/backend where relevant.
 
-If this is a question or general discussion topic, please start a conversation in our chat https://chat.pop-os.org in the ~cosmic-epoch channel.
--->
+**Problem or requested improvement:**
 
-**Cosmic-files version:**
-<!-- (run `apt policy cosmic-files`, or the appropriate substitution for your package manager) -->
+**Steps to reproduce:** use disposable files; remove personal data from logs.
 
-**Issue/Bug description:**
+**Expected and actual behavior:**
 
-**Steps to reproduce:**
+**Evidence:** screenshots, logs, or a minimal fixture where useful.
 
-**Expected behavior:**
-
-**Other notes:**
+**Related upstream issue or PR:** optional; link existing work rather than copying it.

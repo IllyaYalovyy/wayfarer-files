@@ -1,26 +1,35 @@
-# cosmic-files
-File manager for the COSMIC desktop environment
+# Wayfarer Files
 
-## Build the project from source
+An independent file manager for COSMIC, derived from
+[COSMIC Files](https://github.com/pop-os/cosmic-files). We focus on practical
+usability improvements, reliable file operations, and reproducible evidence.
+
+**Early development:** the project name is provisional. Executables, application
+IDs, configuration, and installation recipes still use upstream names. Do not
+install this checkout over your system file manager. Independent identity and
+side-by-side installation are prerequisites for a preview release.
+
+## Development
 
 ```sh
-# Clone the project using `git`
-git clone https://github.com/pop-os/cosmic-files
-# Change to the directory that was created by `git`
-cd cosmic-files
-# Build an optimized version using `cargo`, this may take a while
-cargo build --release
-# Run the optimized version using `cargo`
-cargo run --release
+git clone https://github.com/IllyaYalovyy/wayfarer-files.git
+cd wayfarer-files
+cargo build --locked
+./scripts/check.sh
 ```
 
-## Community and Contributing
+Use the pinned Rust toolchain. Linux builds need a C/C++ toolchain, pkg-config,
+Clang, GLib/GIO and xkbcommon development packages. Validate GUI behavior with
+disposable files and a separate test session; builds alone do not establish it.
 
-The COSMIC desktop environment is maintained by System76 for use in Pop!_OS. A list of all COSMIC projects can be found in the
-[cosmic-epoch](https://github.com/pop-os/cosmic-epoch) project's README. If you would like to discuss COSMIC and Pop!_OS, please
-consider joining the [Pop!_OS Chat](https://chat.pop-os.org/). More information and links can be found on the
-[Pop!_OS Website](https://pop.system76.com).
+Contributions are welcome regardless of authoring tools. Read
+[CONTRIBUTING.md](CONTRIBUTING.md) for the quality bar and
+[DEVELOPMENT.md](DEVELOPMENT.md) for checks and ktask setup.
+Report this fork's problems in [our issue tracker](https://github.com/IllyaYalovyy/wayfarer-files/issues).
 
-## License
+## Upstream and license
 
-This project is licensed under [GPLv3](LICENSE)
+Maintained independently by Illya Yalovyy; not a System76 product. Upstream history,
+copyright notices, and the [GPL-3.0-only license](LICENSE) are retained. Useful
+upstream fixes remain welcome after review and validation. Upstream authors are
+not responsible for this fork or its support.
