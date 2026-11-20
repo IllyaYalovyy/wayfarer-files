@@ -34,7 +34,7 @@ dpkg-shlibdeps -O \
     -e"$stage/usr/bin/cosmic-files-applet" \
     -e"$stage/usr/bin/cosmic-files-thumbnailer" > "$stage/substvars"
 printf 'misc:Depends=\n' >> "$stage/substvars"
-dpkg-gencontrol -pcosmic-files -v"$version" -P"$stage" -T"$stage/substvars"
+dpkg-gencontrol -pcosmic-files -DSource=cosmic-files -v"$version" -P"$stage" -T"$stage/substvars"
 rm "$stage/substvars"
 output_dir=${DEB_OUTPUT_DIR:-"$PWD/target/deb"}
 mkdir -p "$output_dir"

@@ -50,8 +50,9 @@ On Fedora, use a separate source copy and container build directory:
 podman build -t wayfarer-deb -f packaging/debian.Containerfile packaging
 git clone --no-hardlinks . target/deb-source
 mkdir -p target/deb
-podman run --rm -v "$PWD/target/deb-source:/src:Z" \
-  -v wayfarer-deb-build:/build -v "$PWD/target/deb:/out:Z" wayfarer-deb
+podman run --rm -e CARGO_BUILD_JOBS=4 -v "$PWD/target/deb-source:/src:Z" \
+  -v wayfarer-deb-build:/build -v wayfarer-deb-cargo:/root/.cargo \
+  -v "$PWD/target/deb:/out:Z" wayfarer-deb
 ```
 
 Do not package Fedora executables as a DEB. Save the installed Pop!_OS package
