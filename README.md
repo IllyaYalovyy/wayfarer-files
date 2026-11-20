@@ -4,10 +4,14 @@ An independent file manager for COSMIC, derived from
 [COSMIC Files](https://github.com/pop-os/cosmic-files). We focus on practical
 usability improvements, reliable file operations, and reproducible evidence.
 
-**Early development:** the project name is provisional. Executables, application
-IDs, configuration, and installation recipes still use upstream names. Do not
-install this checkout over your system file manager. Independent identity and
-side-by-side installation are prerequisites for a preview release.
+**Installation model:** Wayfarer is a drop-in replacement for COSMIC Files.
+It keeps the executable names, application/configuration IDs, desktop entry,
+applet, and thumbnailer so existing settings and desktop integration continue
+working. About and package metadata identify the fork. It is not installed
+alongside COSMIC Files. See [Fedora packaging](packaging/README.md).
+
+Replacing this package does not change dialogs compiled into the COSMIC portal
+or other applications; those require separate integration builds.
 
 ## Development
 

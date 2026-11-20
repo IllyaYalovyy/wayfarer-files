@@ -4,10 +4,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-only</project_license>
   <project_group>COSMIC</project_group>
-  <developer_name>System76</developer_name>
-  <update_contact>jeremy@system76.com</update_contact>
-  <url type="homepage">https://github.com/pop-os/cosmic-files</url>
-  <url type="bugtracker">https://github.com/pop-os/cosmic-files</url>
+  <developer_name>Illya Yalovyy; based on COSMIC Files by System76</developer_name>
+  <url type="homepage">https://github.com/IllyaYalovyy/wayfarer-files</url>
+  <url type="bugtracker">https://github.com/IllyaYalovyy/wayfarer-files/issues</url>
   <name>COSMIC Files</name>
   <summary>File manager for the COSMIC desktop</summary>
   <description>

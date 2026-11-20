@@ -28,6 +28,8 @@ Keep `origin` pointing to this project and `upstream` to
 do not rewrite published history. Record the original issue/PR and commit for
 imported work. There is no automatic upstream merge or deployment.
 
-Before a preview release, separate the app ID, configuration, executable,
-desktop entry, icons, packaging, and support links; verify coexistence and removal
-without changing the system's file manager or desktop applet.
+Keep COSMIC's installation and configuration identifiers. Build a drop-in package
+with `scripts/package-rpm.sh`; see packaging/README.md for install and rollback.
+Verify compatibility with existing settings before daily-use releases. Distinct
+side-by-side installation is deferred. Portal and application-embedded chooser
+builds remain separate integration work.

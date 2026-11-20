@@ -2364,19 +2364,22 @@ impl Application for App {
         });
 
         let about = About::default()
-            .name(fl!("cosmic-files"))
+            .name("Wayfarer Files")
             .icon(icon::from_name(Self::APP_ID))
             .version(env!("CARGO_PKG_VERSION"))
-            .author("System76")
+            .author("Illya Yalovyy; based on COSMIC Files by System76")
             .comments(fl!("comment"))
             .license("GPL-3.0-only")
             .license_url("https://spdx.org/licenses/GPL-3.0-only")
             .developers([("System76", "info@system76.com")])
             .links([
-                (fl!("repository"), "https://github.com/pop-os/cosmic-files"),
+                (
+                    fl!("repository"),
+                    "https://github.com/IllyaYalovyy/wayfarer-files",
+                ),
                 (
                     fl!("support"),
-                    "https://github.com/pop-os/cosmic-files/issues",
+                    "https://github.com/IllyaYalovyy/wayfarer-files/issues",
                 ),
             ]);
 
