@@ -8,7 +8,7 @@ usability improvements, reliable file operations, and reproducible evidence.
 It keeps the executable names, application/configuration IDs, desktop entry,
 applet, and thumbnailer so existing settings and desktop integration continue
 working. About and package metadata identify the fork. It is not installed
-alongside COSMIC Files. See [Fedora packaging](packaging/README.md).
+alongside COSMIC Files. See [RPM and Pop!_OS DEB packaging](packaging/README.md).
 
 Replacing this package does not change dialogs compiled into the COSMIC portal
 or other applications; those require separate integration builds.

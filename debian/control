@@ -1,20 +1,23 @@
 Source: cosmic-files
 Section: admin
 Priority: optional
-Maintainer: Jeremy Soller <jeremy@system76.com>
+Maintainer: Illya Yalovyy <1623643+IllyaYalovyy@users.noreply.github.com>
 Build-Depends:
     debhelper-compat (=13),
     git,
-    just (>= 1.13.0),
+    just (>= 1.23.0),
     libclang-dev,
     libglib2.0-dev,
     libxkbcommon-dev,
     pkg-config,
     rust-all,
 Standards-Version: 4.6.2
-Homepage: https://github.com/pop-os/cosmic-files
+Homepage: https://github.com/IllyaYalovyy/wayfarer-files
 
 Package: cosmic-files
 Architecture: amd64 arm64
-Depends: ${misc:Depends}, ${shlibs:Depends}, xdg-utils
-Description: Cosmic File Manager
+Depends: ${misc:Depends}, ${shlibs:Depends}, gvfs, gvfs-fuse, xdg-utils
+Recommends: gvfs-backends
+Description: Wayfarer Files, a drop-in COSMIC Files fork
+ Independent fork retaining COSMIC executable names, application identifiers,
+ configuration, desktop applet, and thumbnailer.

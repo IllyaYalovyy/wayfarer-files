@@ -1,4 +1,6 @@
-# Fedora drop-in package
+# Drop-in packages
+
+## Fedora RPM
 
 Requires Fedora's `rpm-build`, `just`, and the development dependencies in the
 root README. From a clean, committed checkout, run `./scripts/package-rpm.sh`.
@@ -32,3 +34,29 @@ Validate payload/dependencies and a DNF transaction before installation. Daily-u
 validation includes launch, existing settings/bookmarks, file operations on
 scratch data, desktop icons, and rollback. The package does not replace chooser
 code embedded in the COSMIC portal or other applications.
+
+## Pop!_OS 24.04 DEB
+
+On Pop!_OS/Ubuntu 24.04, install `build-essential git rustup python3 dpkg-dev
+debhelper libclang-dev libglib2.0-dev libxkbcommon-dev pkg-config`, install the
+repository Rust toolchain and `just` 1.59.0 (`cargo install just --locked
+--version 1.59.0`), then run
+`./scripts/package-deb.sh` from a clean checkout. It builds against the target
+system and derives library dependencies with `dpkg-shlibdeps`.
+
+On Fedora, use a separate source copy and container build directory:
+
+```sh
+podman build -t wayfarer-deb -f packaging/debian.Containerfile packaging
+git clone --no-hardlinks . target/deb-source
+mkdir -p target/deb
+podman run --rm -v "$PWD/target/deb-source:/src:Z" \
+  -v wayfarer-deb-build:/build -v "$PWD/target/deb:/out:Z" wayfarer-deb
+```
+
+Do not package Fedora executables as a DEB. Save the installed Pop!_OS package
+before switching (`apt download cosmic-files=<installed-version>`). Install with
+`sudo apt install ./cosmic-files_<version>_<arch>.deb`; rollback with
+`sudo apt install --allow-downgrades ./<saved-pop-package>.deb`. No pin is added.
+Build architecture follows the build environment; test installation in a Pop!_OS
+session before recommending daily use. Source builds are unsigned local packages.

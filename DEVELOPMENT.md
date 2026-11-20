@@ -29,7 +29,8 @@ do not rewrite published history. Record the original issue/PR and commit for
 imported work. There is no automatic upstream merge or deployment.
 
 Keep COSMIC's installation and configuration identifiers. Build a drop-in package
-with `scripts/package-rpm.sh`; see packaging/README.md for install and rollback.
+with `scripts/package-rpm.sh` or `scripts/package-deb.sh`; see packaging/README.md
+for native/container builds, installation, and rollback.
 Verify compatibility with existing settings before daily-use releases. Distinct
 side-by-side installation is deferred. Portal and application-embedded chooser
 builds remain separate integration work.
