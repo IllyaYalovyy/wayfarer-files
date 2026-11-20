@@ -38,4 +38,5 @@ dpkg-gencontrol -pcosmic-files -DSource=cosmic-files -v"$version" -P"$stage" -T"
 rm "$stage/substvars"
 output_dir=${DEB_OUTPUT_DIR:-"$PWD/target/deb"}
 mkdir -p "$output_dir"
+chmod 755 "$stage"
 dpkg-deb --root-owner-group --build "$stage" "$output_dir/cosmic-files_${version}_${architecture}.deb"
