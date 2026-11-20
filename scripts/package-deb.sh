@@ -26,6 +26,7 @@ trap 'rm -rf "$stage"' EXIT
 just build-release --locked
 just rootdir="$stage" install
 install -Dm644 debian/copyright "$stage/usr/share/doc/cosmic-files/copyright"
+install -Dm644 LICENSE "$stage/usr/share/doc/cosmic-files/LICENSE"
 install -Dm644 README.md "$stage/usr/share/doc/cosmic-files/README.md"
 mkdir -p "$stage/DEBIAN"
 dpkg-shlibdeps -O \
